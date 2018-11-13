@@ -13,7 +13,7 @@ def to_json(inst, cls):
     Jsonify the sql alchemy query result.
     """
     convert = dict()
-    # add your coversions for things like datetime's 
+    # add your coversions for things like datetime's
     # and what-not that aren't serializable.
     d = dict()
     for c in cls.__table__.columns:
@@ -48,7 +48,7 @@ class Movie(db.Model):
     poster = db.Column(db.String(512))
     metascore = db.Column(db.String(5))
     imdbRating = db.Column(db.Float())
-    
+
     def __repr__(self):
         return "<Movie {}>".format(repr(self.title))
 
@@ -71,4 +71,4 @@ class User(db.Model):
 
     @property
     def json(self):
-        return {'user': self.username, 'id': self.id}
+        return {"user": self.username, "id": self.id}
