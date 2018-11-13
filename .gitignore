@@ -1,3 +1,4 @@
 *.pyc
 .vagrant
 flask_api.db
+.vscode
